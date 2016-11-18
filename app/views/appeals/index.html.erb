@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Appeals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Full name</th>
+      <th>Dob</th>
+      <th>Solicitor name</th>
+      <th>Provider acct num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appeals.each do |appeal| %>
+      <tr>
+        <td><%= appeal.full_name %></td>
+        <td><%= appeal.dob %></td>
+        <td><%= appeal.solicitor_name %></td>
+        <td><%= appeal.provider_acct_num %></td>
+        <td><%= link_to 'Show', appeal %></td>
+        <td><%= link_to 'Edit', edit_appeal_path(appeal) %></td>
+        <td><%= link_to 'Destroy', appeal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appeal', new_appeal_path %>
