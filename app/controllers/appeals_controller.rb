@@ -1,4 +1,5 @@
 class AppealsController < ApplicationController
+
   before_action :set_appeal, only: [:show, :edit, :update, :destroy]
 
   # GET /appeals
