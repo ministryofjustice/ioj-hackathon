@@ -54,6 +54,6 @@ class AppealsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def appeal_params
-      params.require(:appeal).permit(:full_name, :dob, :solicitor_name, :provider_acct_num)
+      params.require(:appeal).permit(:full_name, :dob_dd, :dob_mm, :dob_yyyy, :solicitor_name, :provider_acct_num)
     end
 end

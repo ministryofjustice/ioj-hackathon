@@ -20,4 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  helpers:
+      label:
+        appeal:
+          full_name: Full name
+          solicitor_name: Solicitor name
+          provider_acct_num: Provider accunt number
+
+      hint:
+        appeal:
+          full_name: Include middle name if you have one

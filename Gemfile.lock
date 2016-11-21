@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/ministryofjustice/govuk_elements_form_builder.git
+  revision: 72d4f260de4175660c23c96b855f106059000cfc
+  specs:
+    govuk_elements_form_builder (0.0.1)
+      rails (>= 4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,6 +55,8 @@ GEM
     execjs (2.7.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    gov_uk_date_fields (1.2.3)
+      rails (>= 4.0)
     govuk_elements_rails (2.2.0)
       govuk_frontend_toolkit (>= 5.0.0)
       rails (>= 4.1.0)
@@ -173,8 +182,10 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  govuk_elements_rails (>= 1.1.2)
-  govuk_frontend_toolkit (>= 4.6.1)
+  gov_uk_date_fields (= 1.2.3)
+  govuk_elements_form_builder!
+  govuk_elements_rails
+  govuk_frontend_toolkit
   govuk_template (~> 0.18.0)
   haml-rails
   jquery-rails

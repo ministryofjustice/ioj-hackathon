@@ -1,62 +1,51 @@
-%p#notice = notice
-
 %h1 Listing Appeals
 
-%table
-  %thead
-    %tr
-      %th Full name
-      %th Dob
-      %th Solicitor name
-      %th Provider acct num
-      %th{colspan: 3}
+.container.table-container
 
-  %tbody
-    - @appeals.each do |appeal|
+  %table
+    %thead
       %tr
-        %td= appeal.full_name
-        %td= appeal.dob
-        %td= appeal.solicitor_name
-        %td= appeal.provider_acct_num
-        %td= link_to 'Show', appeal
-        %td= link_to 'Edit', edit_appeal_path(appeal)
-        %td= link_to 'Destroy', appeal, method: :delete, data: { confirm: 'Are you sure?' }
+        %th Full name
+        %th Date of birth
+        %th Solicitor name
+        %th Provider acct num
+        %th{colspan: 3}
+
+    %tbody
+      - @appeals.each do |appeal|
+        %tr
+          %td= appeal.full_name
+          %td= appeal.dob
+          %td= appeal.solicitor_name
+          %td= appeal.provider_acct_num
+          %td= link_to 'Show', appeal
+          %td= link_to 'Edit', edit_appeal_path(appeal)
+          %td= link_to 'Destroy', appeal, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
 = link_to 'New Appeal', new_appeal_path
 
 -#
--#<p id="notice"><%= notice %></p>
+-#%h3.heading-medium
+-#  Grid Example + form
 -#
--#<h1>Listing Appeals</h1>
+-#.grid-row
+-#  .column-one-half
+-#    half
 -#
--#<table>
--#  <thead>
--#    <tr>
--#      <th>Full name</th>
--#      <th>Dob</th>
--#      <th>Solicitor name</th>
--#      <th>Provider acct num</th>
--#      <th colspan="3"></th>
--#    </tr>
--#  </thead>
+-#  .column-one-half
+-#    half
 -#
--#  <tbody>
--#    <% @appeals.each do |appeal| %>
--#      <tr>
--#        <td><%= appeal.full_name %></td>
--#        <td><%= appeal.dob %></td>
--#        <td><%= appeal.solicitor_name %></td>
--#        <td><%= appeal.provider_acct_num %></td>
--#        <td><%= link_to 'Show', appeal %></td>
--#        <td><%= link_to 'Edit', edit_appeal_path(appeal) %></td>
--#        <td><%= link_to 'Destroy', appeal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
--#      </tr>
--#    <% end %>
--#  </tbody>
--#</table>
+-#%p
+-#%h1
+-#  Form groups
+-#.form-group
+-#  %label.form-label{:for => "first-name-2"}
+-#    First name
+-#  %input.form-control{:type => "text", :id => "first-name-2"}
 -#
--#<br>
--#
--#<%= link_to 'New Appeal', new_appeal_path %>
+-#.form-group
+-#  %label.form-label{:for => "first-name-2"}
+-#    First name
+-#  %input.form-control{:type => "text", :id => "first-name-2"}

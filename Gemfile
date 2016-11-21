@@ -7,9 +7,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'haml-rails'
 gem 'govuk_template',         '~> 0.18.0'
-gem 'govuk_frontend_toolkit', '>= 4.6.1'
-gem 'govuk_elements_rails',   '>= 1.1.2'
-
+gem 'govuk_frontend_toolkit'
+gem 'govuk_elements_rails'
+gem 'govuk_elements_form_builder', git: 'https://github.com/ministryofjustice/govuk_elements_form_builder.git'
+gem 'gov_uk_date_fields',     '= 1.2.3'
 
 # gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

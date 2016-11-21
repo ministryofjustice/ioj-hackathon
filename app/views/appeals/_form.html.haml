@@ -1,26 +1,23 @@
 
-= form_for(@appeal) do |f|
+= form_for @appeal do |f|
   - if @appeal.errors.any?
     .error_explanation
       %h2= "#{pluralize(@appeal.errors.count, 'error')} prohibited this appeal from being saved:"
       %ul
         - @appeal.errors.full_messages.each do |message|
           %li= message
-  .field
-    = f.label :full_name
-    = f.text_field :full_name
+
+  %p
+  = f.text_field :full_name
 
   .field
-    = f.label :dob
-    = f.date_select :dob
+    = f.gov_uk_date_field(:dob, form_hint_text: '', legend_text: 'Date of birth', legend_class: 'govuk-legend', id: 'dob')
 
   .field
-    = f.label :solicitor_name
     = f.text_field :solicitor_name
 
   .field
-    = f.label :provider_acct_num
     = f.text_field :provider_acct_num
 
   .actions
-    = f.submit
+    = f.submit 'Submit', class: 'button'
