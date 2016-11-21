@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %strong Full name:
+  = @appeal.full_name
+
+%p
+  %strong Dob:
+  = @appeal.dob
+
+%p
+  %strong Solicitor name:
+  = @appeal.solicitor_name
+
+%p
+  %strong Provider Acct num:
+  = @appeal.provider_acct_num
+
+
+
+  -#<p>
+-#  <strong>Full name:</strong>
+-#  <%= @appeal.full_name %>
+-#</p>
+
+-#<p>
+-#  <strong>Dob:</strong>
+-#  <%= @appeal.dob %>
+-#</p>
+
+-#<p>
+-#  <strong>Solicitor name:</strong>
+-#  <%= @appeal.solicitor_name %>
+-#</p>
+-#
+-#<p>
+-#  <strong>Provider acct num:</strong>
+-#  <%= @appeal.provider_acct_num %>
+-#</p>
+
+= link_to 'Edit', edit_appeal_path(@appeal) |
+= link_to 'Back', appeals_path
