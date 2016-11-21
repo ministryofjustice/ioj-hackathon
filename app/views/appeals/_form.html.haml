@@ -11,8 +11,7 @@
   = f.text_field :full_name
 
   .field
-    = f.gov_uk_date_field(:dob, form_hint_text: 'DOB', legend_text: 'Date of birth', legend_class: 'govuk-legend', id: 'dob')
-    = f.date_select :dob
+    = f.gov_uk_date_field(:dob, form_hint_text: '', legend_text: 'Date of birth', legend_class: 'govuk-legend', id: 'dob')
 
   .field
     = f.text_field :solicitor_name
@@ -21,4 +20,4 @@
     = f.text_field :provider_acct_num
 
   .actions
-    = f.submit
+    = f.submit 'Submit', class: 'button'
