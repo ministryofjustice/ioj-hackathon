@@ -15,7 +15,7 @@
       - @appeals.each do |appeal|
         %tr
           %td= appeal.full_name
-          %td= appeal.dob
+          %td= format_date appeal.dob
           %td= appeal.solicitor_name
           %td= appeal.provider_acct_num
           %td= link_to 'Show', appeal
