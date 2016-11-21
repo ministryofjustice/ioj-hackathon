@@ -7,17 +7,15 @@
         - @appeal.errors.full_messages.each do |message|
           %li= message
 
-  %p
   = f.text_field :full_name
 
-  .field
-    = f.gov_uk_date_field(:dob, form_hint_text: '', legend_text: 'Date of birth', legend_class: 'govuk-legend', id: 'dob')
+  = f.gov_uk_date_field(:dob, form_hint_text: '', legend_text: 'Date of birth', legend_class: 'govuk-legend', id: 'dob')
 
-  .field
-    = f.text_field :solicitor_name
+  = f.text_field :solicitor_name
 
-  .field
-    = f.text_field :provider_acct_num
+  = f.text_field :provider_acct_num
+
+  = f.text_area :grounds
 
   .actions
     = f.submit 'Submit', class: 'button'
