@@ -6,23 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require 'csv'
 
-defendants = Defendant.create(
-  [
-    {
-      first_name: 'Stephen',
-      last_name: 'Richards',
-      dob: Date.new(1966, 8, 14)
-    },
-    {
-      first_name: 'Donald',
-      last_name: 'Trump',
-      dob: Date.new(1949, 4, 1)
-    },
-    {
-      first_name: 'Theresa',
-      last_name: 'May',
-      dob: Date.new(1951, 11, 4)
-    }
-  ]
-)
+Defendant.delete_all
+
+# defendants
+data_file_path = File.join(Rails.root, 'db', 'data', 'Appeal Form Data - IJOP.csv')
+
+CSV.foreach(data_file_path) do |row|
+  maat_number, defendant_name, dob, offences, court, solicitor, acct_no, _signature, details, ground, circumstances, additional = row
+  next if maat_number == 'MAAT Number'
+  first_name, last_name = defendant_name.split(' ')
+  Defendant.create(first_name: first_name, last_name: last_name, dob: dob)
+end
