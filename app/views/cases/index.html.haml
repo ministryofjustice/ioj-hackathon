@@ -7,20 +7,19 @@
     %thead
       %tr
         %th MAAT No
+        %th Appeal Date
         %th Defendant name
-        %th Defendant DOB
         %th Solicitor
-        %th Offences
-
+        %th Action
 
     %tbody
       - @cases.each do |hearing|
         %tr
           %td= hearing.maat_number
+          %td= hearing.appeal_date_for_display
           %td= hearing.defendant.name
-          %td= hearing.defendant.date_of_birth
-          %td= hearing.solicitor.details
-          %td= hearing.offences.join('<br/>').html_safe
+          %td= hearing.solicitor.name
+          %td= link_to 'Edit', edit_case_path(hearing)
 
 
 %br

@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: defendants
+#
+#  id         :integer          not null, primary key
+#  first_name :string
+#  last_name  :string
+#  dob        :date
+#
+
 class Defendant < ActiveRecord::Base
 
   has_many :cases
@@ -10,5 +20,8 @@ class Defendant < ActiveRecord::Base
     dob.strftime('%d %b %Y')
   end
 
+  def details
+    "#{name} (DOB: #{date_of_birth})"
+  end
 
 end

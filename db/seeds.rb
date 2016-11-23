@@ -8,6 +8,12 @@
 
 require 'csv'
 
+def random_time
+  rand(15_000).minutes.ago
+end
+
+
+
 Defendant.delete_all
 Solicitor.delete_all
 Case.delete_all
@@ -28,7 +34,12 @@ CSV.foreach(data_file_path) do |row|
     defendant_id: defendant.id,
     solicitor_id: solicitor.id,
     offences: offences.gsub(/"/, '').gsub("'",  '').split(/,\s*/).map(&:strip),
-    court: court
+    court: court,
+    appeal_date: random_time,
+    additional_info: Faker::Lorem.paragraph,
+    grounds: Faker::Lorem.paragraph(2)
+
+
   )
 end
 

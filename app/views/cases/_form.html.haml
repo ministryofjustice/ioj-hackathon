@@ -1,0 +1,65 @@
+
+
+= form_for @case do |f|
+  - if @case.errors.any?
+    .error_explanation
+      %h2= "#{pluralize(@case.errors.count, 'error')} prohibited this appeal from being saved:"
+      %ul
+        - @case.errors.full_messages.each do |message|
+          %li= message
+
+
+  %table
+    %tr
+      %td{width: '20%'} MAAT Number
+      %td= @case.maat_number
+
+    %tr
+      %td Date of appeal
+      %td= format_date(@case.appeal_date)
+
+    %tr
+      %td Defendant
+      %td= @case.defendant.details
+
+    %tr
+      %td Solicitor
+      %td= @case.solicitor.details
+
+    %tr
+      %td Offences appealed
+      %td= @case.offences.join('<br/>').html_safe
+
+    %tr
+      %td Grounds for appeal
+      %td= @case.grounds
+
+    %tr
+      %td Additional information
+      %td= @case.additional_info
+
+
+
+
+  -#  %tr
+  -#    %td Solicitor Name
+  -#    %td= @appeal.solicitor_name
+  -#
+  -#  %tr
+  -#    %td Provider account number
+  -#    %td= @appeal.provider_acct_num
+  -#
+  -#
+  -#
+  -#= f.text_field :full_name
+  -#
+  -#= f.gov_uk_date_field(:dob, form_hint_text: '', legend_text: 'Date of birth', legend_class: 'govuk-legend', id: 'dob')
+  -#
+  -#= f.text_field :solicitor_name
+  -#
+  -#= f.text_field :provider_acct_num
+  -#
+  -#= f.text_area :grounds
+  -#
+  -#.actions
+  -#  = f.submit 'Submit', class: 'button'
