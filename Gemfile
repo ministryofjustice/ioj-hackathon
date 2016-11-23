@@ -9,7 +9,7 @@ gem 'haml-rails'
 gem 'govuk_template',         '~> 0.18.0'
 gem 'govuk_frontend_toolkit'
 gem 'govuk_elements_rails'
-gem 'govuk_elements_form_builder', git: 'https://github.com/ministryofjustice/govuk_elements_form_builder.git'
+gem 'govuk_elements_form_builder', git: 'https://github.com/stephenrichards/govuk_elements_form_builder.git'
 gem 'gov_uk_date_fields',     '= 1.2.3'
 gem 'rails_12factor', group: :production
 
