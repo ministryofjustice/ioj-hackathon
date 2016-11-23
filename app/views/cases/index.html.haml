@@ -10,6 +10,7 @@
         %th Appeal Date
         %th Defendant name
         %th Solicitor
+        %th Actions
 
     %tbody
       - @cases.each do |hearing|
@@ -18,7 +19,11 @@
           %td= hearing.appeal_date_for_display
           %td= hearing.defendant.name
           %td= hearing.solicitor.name
+          %td
+            = link_to 'Process', 'images/maat_resize.png'
+            = link_to 'Approve', cases_path
+            = link_to 'Reject', cases_path
+
 
 
 %br
-

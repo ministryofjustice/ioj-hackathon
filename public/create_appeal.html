@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        #header {
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+            overflow: auto;
+        }
+
+        #header-middle {
+
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #logo {
+            width: 300px;
+            float: left;
+
+
+        }
+
+        #section {
+            width:1100px;
+            float:left;
+            padding:10px;
+        }
+        #footer {
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }          </style>
+</head>
+<body>
+<div id="header">
+    <div id="logo">
+        <img alt="LAA picture" src="PIX/moj_logo_laa.png" style="width:330px;height:80px;" /></div>
+    <div id="header-middle">
+        &nbsp;</div>
+    <h1>
+        Interests of Justice APPEAL</h1>
+</div>
+<div id="section">
+    <h2>
+        Application to appeal grant of legal aid refused on Interests of Justice criteria</h2>
+    &nbsp;MAAT No:&nbsp;<input maxlength="10" name="MAATNum" type="text" />
+    <p>
+        Date Of Appeal:&nbsp;<input maxlength="12" name="DateAppeal" type="text" /></p>
+    <p>
+        Defendant :&nbsp;<input maxlength="25" name="DefName" type="text" /></p>
+    <p>
+        Solicitor:&nbsp;<input maxlength="25" name="SolName" type="text" /></p>
+    <p>
+        I.O.J. Criteria:&nbsp;<textarea cols="80" name="IOJCriteria" rows="3"></textarea></p>
+    <p>
+        Original Caseworker&#39;s Response:<textarea cols="80" name="CaseWkrResponse" rows="3"></textarea></p>
+    <p>
+        &nbsp;</p>
+    <form name="Offences">
+        <fieldset>
+            <legend> DETAIL OF OFFENCES TO BE APPEALED: </legend>
+            <p>
+                <textarea cols="80" maxlength="250" name="OffenceDetails" rows="5"></textarea></p>
+        </fieldset>
+    </form>
+    <br />
+    <form name="Grounds">
+        <fieldset>
+            <legend> SET OUT GROUNDS FOR APPEAL: </legend><textarea cols="80" maxlength="250" name="GroundsAppeal" rows="5"></textarea>
+            <p>
+                &nbsp;</p>
+        </fieldset>
+    </form>
+    <p>
+        &nbsp;</p>
+    <fieldset>
+        <legend> Has there been a change in financial circumstances?: </legend>
+        <p>
+            YES &nbsp;<input name="FinancialChangeYES" type="radio" /></p>
+        <p>
+            NO &nbsp;<input name="FinancialChangeNO" type="radio" /></p>
+    </fieldset>
+    <p>
+        &nbsp;</p>
+    <p>
+        <a href="https://nameless-refuge-39668.herokuapp.com/cases" /><button> SUBMIT APPEAL </button> </a> </p>
+    <p>
+        &nbsp;</p>
+    <br />
+    &nbsp;</div>
+<div id="footer">
+    Interests of Justice Appeal</div>
+</body>
+</html>
