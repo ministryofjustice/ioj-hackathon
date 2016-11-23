@@ -11,55 +11,30 @@
 
   %table
     %tr
-      %td{width: '20%'} MAAT Number
+      %th{width: '20%'} MAAT Number
       %td= @case.maat_number
 
     %tr
-      %td Date of appeal
+      %th Date of appeal
       %td= format_date(@case.appeal_date)
 
     %tr
-      %td Defendant
+      %th Defendant
       %td= @case.defendant.details
 
     %tr
-      %td Solicitor
+      %th Solicitor
       %td= @case.solicitor.details
 
     %tr
-      %td Offences appealed
+      %th Offences appealed
       %td= @case.offences.join('<br/>').html_safe
 
     %tr
-      %td Grounds for appeal
+      %th Grounds for appeal
       %td= @case.grounds
 
     %tr
-      %td Additional information
+      %th Additional information
       %td= @case.additional_info
 
-
-
-
-  -#  %tr
-  -#    %td Solicitor Name
-  -#    %td= @appeal.solicitor_name
-  -#
-  -#  %tr
-  -#    %td Provider account number
-  -#    %td= @appeal.provider_acct_num
-  -#
-  -#
-  -#
-  -#= f.text_field :full_name
-  -#
-  -#= f.gov_uk_date_field(:dob, form_hint_text: '', legend_text: 'Date of birth', legend_class: 'govuk-legend', id: 'dob')
-  -#
-  -#= f.text_field :solicitor_name
-  -#
-  -#= f.text_field :provider_acct_num
-  -#
-  -#= f.text_area :grounds
-  -#
-  -#.actions
-  -#  = f.submit 'Submit', class: 'button'
