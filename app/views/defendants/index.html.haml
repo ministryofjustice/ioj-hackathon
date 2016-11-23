@@ -1,0 +1,20 @@
+%h1 Listing Defendants
+
+.container.table-container
+
+  %table
+    %thead
+      %tr
+        %th First name
+        %th Last name
+        %th Date of birth
+
+    %tbody
+      - @defendants.each do |defendant|
+        %tr
+          %td= defendant.first_name
+          %td= defendant.last_name
+          %td= format_date defendant.dob
+
+%br
+
