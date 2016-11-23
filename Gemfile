@@ -12,7 +12,7 @@ gem 'govuk_elements_rails'
 gem 'govuk_elements_form_builder', git: 'https://github.com/stephenrichards/govuk_elements_form_builder.git'
 gem 'gov_uk_date_fields',     '= 1.2.3'
 gem 'rails_12factor', group: :production
-gem 'awesome_print', group: [:development, :test]
+gem 'awesome_print'
 
 
 # gem 'coffee-rails', '~> 4.1.0'

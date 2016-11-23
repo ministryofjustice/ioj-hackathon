@@ -16,7 +16,6 @@ Case.delete_all
 data_file_path = File.join(Rails.root, 'db', 'data', 'Appeal Form Data - IJOP.csv')
 
 CSV.foreach(data_file_path) do |row|
-  ap row
   maat_number, defendant_name, dob, offences, court, solicitor, acct_no, _signature, details, ground, circumstances, additional = row
   next if maat_number == 'MAAT Number'
   first_name, last_name = defendant_name.split(' ')
